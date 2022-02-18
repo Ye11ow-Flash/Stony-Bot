@@ -38,7 +38,7 @@ async def courseinfo(ctx, subject, code):
     class_dict = major_scrapper.get_course_data(subject, code)
     embed = create_embed(class_dict)
     await ctx.send(embed=embed)
-    
+
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(
@@ -49,7 +49,7 @@ async def help(ctx):
                     value="information for any course", inline=False)
     embed.add_field(name="?degreeinfo <majorname>",
                     value="information about degree requirements", inline=False)
-    embed.add_field(name="?random <majorname>",
+    embed.add_field(name="?randomcourse <majorname>",
                     value="random course in that major!", inline=False)
     await ctx.send(embed=embed)
     
