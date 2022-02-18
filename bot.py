@@ -9,6 +9,7 @@ import json
 import random
 import requests
 import asyncio
+import major_scrapper
 
 intents = discord.Intents.all()
 load_dotenv()
@@ -30,7 +31,7 @@ def create_embed(query_dict):
         title=query_dict["title"], description=query_dict["description"], colour=0X650100)
     embed.add_field(name="Prerequisites",
                     value=query_dict["prereq"], inline=False)
-    embed.add_field(name="SBC",
+    embed.add_field(name="sbc",
                     value=query_dict["credits"], inline=False)
     embed.add_field(name="Course Code",
                     value=query_dict["code"], inline=False)
@@ -42,8 +43,12 @@ async def on_ready():
 
 @bot.command()
 async def query(ctx, subject, code):
-    embed = create_embed(example_dict)
+    class_dict = major_scrapper.get_course_data(subject, code)
+    embed = create_embed(class_dict)
     await ctx.send(embed=embed)
     
+@bot.event
+async def on_command_error(ctx, error):
+    await ctx.send(error)
 
 bot.run(TOKEN)

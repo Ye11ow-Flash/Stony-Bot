@@ -22,9 +22,9 @@ def get_all_data(major):
     cred = link.findAll('p')[3].text
     course_data["title"] = title
     course_data["description"] = description
-    course_data["prerequisite"] = prerequisite
+    course_data["prereq"] = prerequisite
     course_data["sbc"] = sbc
-    course_data["cred"] = cred
+    course_data["credits"] = cred
     course_data["code"] = course_data["title"][4:7]
     data.append(course_data)
   return data
