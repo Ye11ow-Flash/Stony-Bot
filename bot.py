@@ -15,7 +15,8 @@ intents = discord.Intents.all()
 load_dotenv()
 TOKEN = os.environ.get('TOKEN', 3)
 
-bot = commands.Bot(command_prefix="/", intents=intents)
+bot = commands.Bot(command_prefix="?", intents=intents)
+bot.remove_command('help')
 
 def create_embed(query_dict):
     embed = discord.Embed(
@@ -42,16 +43,15 @@ async def courseinfo(ctx, subject, code):
 async def help(ctx):
     embed = discord.Embed(
         title="Help", description="Accessing the undergrad bulletin has never been easier!", colour=0X650100)
-    embed.add_field(name="/help",
+    embed.add_field(name="?help",
                     value="list of all commands", inline=False)
-    embed.add_field(name="/courseinfo  <majorname> <number>",
+    embed.add_field(name="?courseinfo  <majorname> <number>",
                     value="information for any course", inline=False)
-    embed.add_field(name="/degreeinfo <majorname>",
+    embed.add_field(name="?degreeinfo <majorname>",
                     value="information about degree requirements", inline=False)
-    embed.add_field(name="/random <majorname>",
+    embed.add_field(name="?random <majorname>",
                     value="random course in that major!", inline=False)
-
-    return embed
+    await ctx.send(embed=embed)
     
 
 @bot.event
