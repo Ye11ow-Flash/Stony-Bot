@@ -27,7 +27,7 @@ example_dict = { # this is the object i need returned
 
 def create_embed(query_dict):
     embed = discord.Embed(
-        title=query_dict["title"], description=query_dict["description"], colour="#650100")
+        title=query_dict["title"], description=query_dict["description"], colour=0X650100)
     embed.add_field(name="Prerequisites",
                     value=query_dict["prereq"], inline=False)
     embed.add_field(name="SBC",
@@ -39,11 +39,11 @@ def create_embed(query_dict):
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
-    
 
 @bot.command()
-async def query(ctx):
+async def query(ctx, subject, code):
     embed = create_embed(example_dict)
     await ctx.send(embed=embed)
+    
 
 bot.run(TOKEN)
