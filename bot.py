@@ -51,6 +51,6 @@ async def query(ctx, subject, code):
     
 @bot.event
 async def on_command_error(ctx, error):
-    await ctx.send(error)
+    await ctx.send("Sorry! I encountered this error: \n```" + f"{error}" + '```')
 
 bot.run(TOKEN)
