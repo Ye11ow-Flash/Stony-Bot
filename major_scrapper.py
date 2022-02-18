@@ -4,8 +4,9 @@ import sys
 import collections
 
 major = "cse"
-url = "https://www.stonybrook.edu/sb/bulletin/current/courses/"+major+"/"
-def get_major_data(url):
+
+def get_all_data(major):
+  url = "https://www.stonybrook.edu/sb/bulletin/current/courses/"+major+"/"
   source_code = requests.get(url)
   plain_text=source_code.text
   soup = BeautifulSoup(plain_text, features="html.parser")
@@ -24,7 +25,11 @@ def get_major_data(url):
     course_data["prerequisite"] = prerequisite
     course_data["sbc"] = sbc
     course_data["cred"] = cred
+    course_data["code"] = course_data["title"][4:7]
     data.append(course_data)
-  # print(data)
+  return data
   
-get_major_data(url)
+def get_course_data(course, code):
+    for item in get_all_data(course):
+      if item['code'] == code:
+        return item
