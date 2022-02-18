@@ -31,8 +31,10 @@ def create_embed(query_dict):
         title=query_dict["title"], description=query_dict["description"], colour=0X650100)
     embed.add_field(name="Prerequisites",
                     value=query_dict["prereq"], inline=False)
-    embed.add_field(name="sbc",
+    embed.add_field(name="Credits",
                     value=query_dict["credits"], inline=False)
+    embed.add_field(name="SBC",
+                    value=query_dict["sbc"], inline=False)
     embed.add_field(name="Course Code",
                     value=query_dict["code"], inline=False)
     return embed
