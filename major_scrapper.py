@@ -3,7 +3,9 @@ from bs4 import BeautifulSoup
 import sys
 import collections
 
-major = "cse"
+#major = "cse"
+# TODO: SBCs returned incorrectly
+# TODO: return coreqs
 
 def get_all_data(major):
   url = "https://www.stonybrook.edu/sb/bulletin/current/courses/"+major+"/"
