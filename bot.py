@@ -27,13 +27,13 @@ example_dict = { # this is the object i need returned
 
 def create_embed(query_dict):
     embed = discord.Embed(
-        title=f"{query_dict["title"]}", description=f"{query_dict["description"]}", colour="#650100")
+        title=query_dict["title"], description=query_dict["description"], colour="#650100")
     embed.add_field(name="Prerequisites",
-                    value=f"{query_dict["prereq"]}", inline=False)
+                    value=query_dict["prereq"], inline=False)
     embed.add_field(name="SBC",
-                    value=f"{query_dict["credits"]}", inline=False)
+                    value=query_dict["credits"], inline=False)
     embed.add_field(name="Course Code",
-                    value=f"{query_dict["code"]}", inline=False)
+                    value=query_dict["code"], inline=False)
     return embed
 
 @bot.event
