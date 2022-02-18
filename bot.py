@@ -24,8 +24,6 @@ def create_embed(query_dict):
                     value=query_dict["prereq"], inline=False)
     embed.add_field(name="Credits",
                     value=query_dict["credits"], inline=False)
-    embed.add_field(name="SBC",
-                    value=query_dict["sbc"], inline=False)
     embed.add_field(name="Course Code",
                     value=query_dict["code"], inline=False)
     return embed

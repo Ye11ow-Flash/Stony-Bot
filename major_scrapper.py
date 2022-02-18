@@ -4,7 +4,6 @@ import sys
 import collections
 
 #major = "cse"
-# TODO: SBCs returned incorrectly
 # TODO: return coreqs
 
 def get_all_data(major):
