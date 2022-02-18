@@ -45,3 +45,5 @@ async def on_ready():
 async def query(ctx):
     embed = create_embed(example_dict)
     await ctx.send(embed=embed)
+
+bot.run(TOKEN)
