@@ -17,5 +17,5 @@ def get_courses(url):
     data.append(course_data)
   # for i in data:
   #   print(i)
+  return data
 
-get_courses(url)
