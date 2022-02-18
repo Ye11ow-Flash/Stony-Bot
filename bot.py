@@ -15,7 +15,7 @@ intents = discord.Intents.all()
 load_dotenv()
 TOKEN = os.environ.get('TOKEN', 3)
 
-bot = commands.Bot(command_prefix="?", intents=intents)
+bot = commands.Bot(command_prefix="/", intents=intents)
 
 def create_embed(query_dict):
     embed = discord.Embed(
@@ -38,6 +38,22 @@ async def courseinfo(ctx, subject, code):
     embed = create_embed(class_dict)
     await ctx.send(embed=embed)
     
+@bot.command()
+async def help(ctx):
+    embed = discord.Embed(
+        title="Help", description="Accessing the undergrad bulletin has never been easier!", colour=0X650100)
+    embed.add_field(name="/help",
+                    value="list of all commands", inline=False)
+    embed.add_field(name="/courseinfo  <majorname> <number>",
+                    value="information for any course", inline=False)
+    embed.add_field(name="/degreeinfo <majorname>",
+                    value="information about degree requirements", inline=False)
+    embed.add_field(name="/random <majorname>",
+                    value="random course in that major!", inline=False)
+
+    return embed
+    
+
 @bot.event
 async def on_command_error(ctx, error):
     await ctx.send("Sorry! I encountered this error: \n```" + f"{error}" + '```')
