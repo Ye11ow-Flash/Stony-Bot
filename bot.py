@@ -35,7 +35,7 @@ async def on_ready():
     print(f"We have logged in as {bot.user}")
 
 @bot.command()
-async def query(ctx, subject, code):
+async def courseinfo(ctx, subject, code):
     class_dict = major_scrapper.get_course_data(subject, code)
     embed = create_embed(class_dict)
     await ctx.send(embed=embed)
