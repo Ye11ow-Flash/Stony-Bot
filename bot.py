@@ -39,5 +39,9 @@ def create_embed(query_dict):
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
+    
 
-
+@bot.command()
+async def query(ctx):
+    embed = create_embed(example_dict)
+    await ctx.send(embed=embed)
