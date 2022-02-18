@@ -42,17 +42,16 @@ async def courseinfo(ctx, subject, code):
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(
-        title="Help", description="Accessing the undergrad bulletin has never been easier!", colour=0X650100)
+        title="Help", description="Accessing the undergrad bulletin has never been easier! A major code is the 3 digit major classification, such as CSE or CHE", colour=0X650100)
     embed.add_field(name="?help",
                     value="list of all commands", inline=False)
-    embed.add_field(name="?courseinfo  <majorname> <number>",
+    embed.add_field(name="?courseinfo  <majorcode> <number>",
                     value="information for any course", inline=False)
-    embed.add_field(name="?degreeinfo <majorname>",
+    embed.add_field(name="?degreeinfo <majorcode>",
                     value="information about degree requirements", inline=False)
     embed.add_field(name="?randomcourse <majorname>",
                     value="random course in that major!", inline=False)
     await ctx.send(embed=embed)
-    
 
 @bot.event
 async def on_command_error(ctx, error):
