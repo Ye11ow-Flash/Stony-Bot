@@ -1,6 +1,5 @@
 # bot.py
 # 02.18.2022
-
 from discord.ext import commands
 from dotenv import load_dotenv
 import discord
@@ -17,6 +16,8 @@ TOKEN = os.environ.get('TOKEN', 3)
 
 bot = commands.Bot(command_prefix="?", intents=intents)
 bot.remove_command('help')
+
+random.seed(0)
 
 def create_embed(query_dict):
     embed = discord.Embed(
@@ -35,10 +36,18 @@ async def on_ready():
 
 @bot.command()
 async def courseinfo(ctx, subject, code):
-    class_dict = major_scrapper.get_course_data(subject, code)
-    embed = create_embed(class_dict)
+    all_courses = major_scrapper.get_course_data(subject, code)
+    randNum = randint(0,len(all_courses))
+    random_course_dict = all_courses[randNum]
+    embed = create_embed(random_course_dict)
     await ctx.send(embed=embed)
-    
+
+@bot.command()
+async def randomcourse(ctx, major)
+    course_dict = courses_scrapper.get_courses(major)
+    embed = create_embed(course_dict)
+    await ctx.send(embed=embed)
+
 @bot.command()
 async def listcourse(ctx, major):
     return_string = "```\n"
