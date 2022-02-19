@@ -44,8 +44,8 @@ async def courseinfo(ctx, subject, code):
 async def randomcourse(ctx, major):
     course_dict = courses_scrapper.get_courses(major)
     randomNum = random.randint(0, len(course_dict))
-    random_course_dict = course_dict[randomNum]
-    course_info_dict = major_scrapper.get_course_data(major, random_course_dict['code'])
+    random_course_code = course_dict[randomNum]['code']
+    course_info_dict = major_scrapper.get_course_data(major, random_course_code)
     embed = create_embed(course_info_dict)
     await ctx.send(embed=embed)
 
