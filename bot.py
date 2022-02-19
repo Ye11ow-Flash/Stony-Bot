@@ -38,6 +38,7 @@ async def on_ready():
 async def degreeinfo(ctx, major):
     description = degreeinfo_scrapper.get_degree_info(major)[0]
     embed = discord.Embed(title=major.upper(), description=description, colour=0X650100)
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def courseinfo(ctx, subject, code):
