@@ -46,7 +46,7 @@ async def listcourse(ctx, major):
     for i in all_courses:
         j = i['code'] + i['title']
         return_string += j
-        if ((return_string + j).len() >= 2000):
+        if (len(return_string + j) >= 2000):
             await ctx.send(return_string + f"Read more at https://www.stonybrook.edu/sb/bulletin/current/courses/{major}/ ```")
             return
     await ctx.send(return_string + '\n```')
