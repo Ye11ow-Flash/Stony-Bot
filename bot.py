@@ -85,15 +85,15 @@ async def plans(ctx):
 async def help(ctx):
     embed = discord.Embed(
         title="Help", description="Accessing the undergrad bulletin has never been easier! A major code is the 3 digit major classification, such as CSE or CHE", colour=0X650100)
-    embed.add_field(name="?help",
+    embed.add_field(name="-help",
                     value="list of all commands", inline=False)
-    embed.add_field(name="?courseinfo  <majorcode> <number>",
+    embed.add_field(name="-courseinfo  <majorcode> <number>",
                     value="information for any course", inline=False)
-    embed.add_field(name="?listcourse  <majorcode>",
+    embed.add_field(name="-listcourse  <majorcode>",
                     value="lists all courses for <major>", inline=False)
-    embed.add_field(name="?degreeinfo <majorcode>",
+    embed.add_field(name="-degreeinfo <majorcode>",
                     value="information about degree requirements", inline=False)
-    embed.add_field(name="?randomcourse <majorname>",
+    embed.add_field(name="-randomcourse <majorname>",
                     value="random course in that major!", inline=False)
     await ctx.send(embed=embed)
 
