@@ -9,7 +9,7 @@ import json
 import random
 import requests
 import asyncio
-import major_scrapper
+import major_scrapper, courses_scrapper
 
 intents = discord.Intents.all()
 load_dotenv()
@@ -38,6 +38,13 @@ async def courseinfo(ctx, subject, code):
     class_dict = major_scrapper.get_course_data(subject, code)
     embed = create_embed(class_dict)
     await ctx.send(embed=embed)
+    
+@bot.command()
+async def listcourse(ctx):
+    string = "```\n"
+    for i in courses_scrapper.get_courses():
+        string += i
+    await ctx.send(i + '\n```')
 
 @bot.command()
 async def help(ctx):
