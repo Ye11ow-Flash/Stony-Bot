@@ -37,14 +37,14 @@ Thus, we present **StonyBot**! This is a bot which will ease out this process an
 
 # 👀 What is StonyBot?
 
-**StonyBot** is a Discord Bot which can be used by any student to get information on courses, majors, and planning out the degree.
+**StonyBot** is a Discord Bot which can be used by any student to get information on courses, majors, and planning out their degree.
 
 <br>
 
 
 # 🤖 Why use StonyBot?
 
-**StonyBot** is designed to help students in their planning and get precise and concise information from the undergraduate bulletin
+**StonyBot** is designed to help Stony Brook students in their planning and get precise and concise information from the undergraduate bulletin
 
 - **StonyBot** can get information about any course from any major
 - A **simple and easy** way to explore courses and majors
@@ -62,7 +62,7 @@ Thus, we present **StonyBot**! This is a bot which will ease out this process an
 
 ### 3. 🚀 Versatile
 
-This is a Discord bot, thus can be added to any discord server!
+Attached to the bot is a seperate library of functions, used to access the bulletin. This means that these functions can be ported to any platform, including slack, telegram, websites, or even Alexa skills. And because this is a Discord bot, it can be added to any discord server!
 
 # Json Schema
 
@@ -82,6 +82,6 @@ Feel free to reach out to our team members. We will be happy to help you.
 
 ## Team members:
 - [@ye11ow_flash](https://www.linkedin.com/in/jaineel97/)
-- []()
+- [@daminals](https://www.linkedin.com/in/danielkogan123/)
 - []()
 - []()
