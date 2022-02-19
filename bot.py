@@ -45,6 +45,9 @@ async def listcourse(ctx, major):
     all_courses = courses_scrapper.get_courses(major)
     for i in all_courses:
         return_string += i
+        if ((return_string + i).len() >= 2000):
+            await ctx.send(return_string + f"Read more at https://www.stonybrook.edu/sb/bulletin/current/courses/{major}/ ```")
+            return
     await ctx.send(return_string + '\n```')
 
 @bot.command()
@@ -55,6 +58,8 @@ async def help(ctx):
                     value="list of all commands", inline=False)
     embed.add_field(name="?courseinfo  <majorcode> <number>",
                     value="information for any course", inline=False)
+    embed.add_field(name="?listcourse  <majorcode>",
+                    value="lists all courses for <major>", inline=False)
     embed.add_field(name="?degreeinfo <majorcode>",
                     value="information about degree requirements", inline=False)
     embed.add_field(name="?randomcourse <majorname>",
