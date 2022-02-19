@@ -43,7 +43,7 @@ async def courseinfo(ctx, subject, code):
 @bot.command()
 async def randomcourse(ctx, major):
     course_lists = courses_scrapper.get_courses(major)
-    randomNum = random.randint(0, len(course_list)-1)
+    randomNum = random.randint(0, len(course_lists)-1)
     random_course_code = course_lists[randomNum]['code']
     course_info_dict = major_scrapper.get_course_data(major, random_course_code)
     embed = create_embed(course_info_dict)
