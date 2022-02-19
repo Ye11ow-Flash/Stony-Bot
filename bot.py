@@ -43,7 +43,6 @@ async def courseinfo(ctx, subject, code):
 @bot.command()
 async def randomcourse(ctx, major):
     course_list = courses_scrapper.get_courses(major)
-    print(course_list)
     randomNum = random.randint(0, len(course_list)-1)
     random_course_code = course_list[randomNum]['code']
     course_info_dict = major_scrapper.get_course_data(major, random_course_code)
