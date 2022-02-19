@@ -12,7 +12,7 @@ def get_courses(major):
   for link in soup.findAll('div',{'class' : 'course'}):
     course_data = collections.defaultdict(str)
     title = link.find('h3').text
-    course_data["code"] = title.split(":")[0].split("\xa0")[0] + "-" + title.split(":")[0].split("\xa0")[1]
+    course_data["code"] = title.split(":")[0].split("\xa0")[1]
     course_data["title"] = title.split(":")[1]
     data.append(course_data)
   # for i in data:
