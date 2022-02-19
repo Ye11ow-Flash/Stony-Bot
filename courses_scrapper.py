@@ -11,10 +11,10 @@ def get_courses(major):
   soup = BeautifulSoup(plain_text, features="html.parser")
   data = []
   for link in soup.findAll('div',{'class' : 'course'}):
-    course_data = collections.defaultdict(str)
+    #course_data = collections.defaultdict(str)
     title = link.find('h3').text
-    course_data["title"] = title.split(":")[1]
-    data.append(course_data)
+    #course_data["title"] = 
+    data.append(title.split(":")[1])
   # for i in data:
   #   print(i)
   return data
