@@ -3,9 +3,8 @@ from bs4 import BeautifulSoup
 import sys
 import collections
 
-major = "bio"
-url = "https://www.stonybrook.edu/sb/bulletin/current/courses/"+major+"/"
-def get_courses(url):
+def get_courses(major):
+  url = "https://www.stonybrook.edu/sb/bulletin/current/courses/"+major+"/"
   source_code = requests.get(url)
   plain_text=source_code.text
   soup = BeautifulSoup(plain_text, features="html.parser")
@@ -19,4 +18,3 @@ def get_courses(url):
   # for i in data:
   #   print(i)
 
-get_courses(url)
