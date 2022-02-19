@@ -16,3 +16,5 @@ However, what use would viewing courses do without being able to track if and wh
 
 That's where our built in course tracker comes in. It uses your discord IDs to store your courses. Because it uses discord IDs, it can be private and restricted to you by discord authentification, or it can be shown to your friends at your choosing. In addition, the planner is accessible across every server the bot is in, meaning you are not stuck to a planning on just one server!
 
+Sure beats Solar doesn't it ;)
+

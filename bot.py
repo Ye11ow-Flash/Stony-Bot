@@ -14,7 +14,7 @@ intents = discord.Intents.all()
 load_dotenv()
 TOKEN = os.environ.get('TOKEN', 3)
 
-bot = commands.Bot(command_prefix="?", intents=intents)
+bot = commands.Bot(command_prefix="-", intents=intents)
 bot.remove_command('help')
 
 random.seed(0)
