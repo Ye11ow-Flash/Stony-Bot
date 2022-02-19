@@ -37,9 +37,7 @@ async def on_ready():
 @bot.command()
 async def courseinfo(ctx, subject, code):
     all_courses = major_scrapper.get_course_data(subject, code)
-    randNum = randint(0,len(all_courses))
-    random_course_dict = all_courses[randNum]
-    embed = create_embed(random_course_dict)
+    embed = create_embed(all_courses)
     await ctx.send(embed=embed)
 
 @bot.command()
