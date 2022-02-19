@@ -1,3 +1,4 @@
+from webbrowser import get
 import requests
 from bs4 import BeautifulSoup
 import sys
@@ -18,4 +19,6 @@ def get_courses(major):
   # for i in data:
   #   print(i)
   return data
+
+print(get_courses(major))
 

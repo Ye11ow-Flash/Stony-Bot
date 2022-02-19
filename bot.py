@@ -41,10 +41,11 @@ async def courseinfo(ctx, subject, code):
     
 @bot.command()
 async def listcourse(ctx, major):
-    string = "```\n"
-    for i in courses_scrapper.get_courses(major):
-        string += i
-    await ctx.send(i + '\n```')
+    return_string = "```\n"
+    all_courses = courses_scrapper.get_courses(major)
+    for i in all_courses:
+        return_string += i
+    await ctx.send(return_string + '\n```')
 
 @bot.command()
 async def help(ctx):
