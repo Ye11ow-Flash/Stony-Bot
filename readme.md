@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
-  <a href="logo.png"><img src="logo.png" alt="StonyBot" width="300"></a>
-  StonyBot
+  <a href="https://github.com/Ye11ow-Flash/Hack-CEWIT/blob/main/stonybotlogo-modified.png"><img src="https://github.com/Ye11ow-Flash/Hack-CEWIT/blob/main/stonybotlogo-modified.png" alt="StonyBot" width="500"></a>
+<!--   StonyBot -->
 </h1>
 
 <!-- ------------------------------------------ -->
