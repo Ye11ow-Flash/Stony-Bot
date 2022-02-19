@@ -95,6 +95,12 @@ async def help(ctx):
                     value="information about degree requirements", inline=False)
     embed.add_field(name="-randomcourse <majorname>",
                     value="random course in that major!", inline=False)
+    embed.add_field(name="-add <majorcode> <number> <semester> <year>",
+                value="Add a course to your planner!", inline=False)
+    embed.add_field(name="-remove <majorcode> <number>",
+                value="Remove a course from your planner!", inline=False)
+    embed.add_field(name="-move <majorcode> <number> <old semester> <old year> <new semester> <new year>",
+                value="Move a course in your planner!", inline=False)
     await ctx.send(embed=embed)
 
 @bot.event
