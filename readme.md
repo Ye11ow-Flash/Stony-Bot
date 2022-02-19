@@ -83,5 +83,5 @@ Feel free to reach out to our team members. We will be happy to help you.
 ## Team members:
 - [@ye11ow_flash](https://www.linkedin.com/in/jaineel97/)
 - [@daminals](https://www.linkedin.com/in/danielkogan123/)
-- []()
+- [@circlegov](https://www.linkedin.com/in/david-levin-361a58185)
 - []()

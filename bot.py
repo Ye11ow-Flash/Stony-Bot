@@ -8,7 +8,7 @@ import json
 import random
 import requests
 import asyncio
-import major_scrapper, courses_scrapper, planner
+import major_scrapper, courses_scrapper, planner, degreeinfo_scrapper
 
 intents = discord.Intents.all()
 load_dotenv()
@@ -33,6 +33,11 @@ def create_embed(query_dict):
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
+
+@bot.command()
+async def degreeinfo(ctx, major):
+    description = degreeinfo_scrapper.get_degree_info(major)[0]
+    embed = discord.Embed(title=major.upper(), description=description, colour=0X650100)
 
 @bot.command()
 async def courseinfo(ctx, subject, code):
