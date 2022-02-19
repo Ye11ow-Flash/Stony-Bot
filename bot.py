@@ -8,7 +8,7 @@ import json
 import random
 import requests
 import asyncio
-import major_scrapper, courses_scrapper
+import major_scrapper, courses_scrapper, planner
 
 intents = discord.Intents.all()
 load_dotenv()
@@ -60,6 +60,26 @@ async def listcourse(ctx, major):
             await ctx.send(return_string + f"``` Read more at https://www.stonybrook.edu/sb/bulletin/current/courses/{major}/ ")
             return
     await ctx.send(return_string + '\n```')
+
+@bot.command(name="add")
+async def add_class(ctx, course, code, semester, year):
+    time = semester + year
+    planner.add_course(str(ctx.author.id), course, code, time)
+    await ctx.reply(f"Added {course} {code} to {semester} {year}")
+    
+@bot.command(name='remove')
+async def remove_class(ctx, course, code):
+    await ctx.reply(planner.remove_course(str(ctx.author.id), course, code))
+    
+@bot.command(name='move')
+async def move_class(ctx, course, code, oldsem, oldyear, newsem, newyear):
+    old = oldsem + oldyear
+    new = newsem + newyear
+    await ctx.reply(planner.move_course(str(ctx.author.id), course, code, old, new))
+
+@bot.command(name='plan')
+async def plans(ctx):
+    await ctx.send(planner.planner(str(ctx.author.id)))
 
 @bot.command()
 async def help(ctx):
