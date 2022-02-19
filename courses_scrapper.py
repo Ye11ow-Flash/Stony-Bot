@@ -17,4 +17,5 @@ def get_courses(major):
     data.append(course_data)
   # for i in data:
   #   print(i)
+  return data
 
