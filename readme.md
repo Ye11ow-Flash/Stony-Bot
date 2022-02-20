@@ -68,7 +68,7 @@ Attached to the bot is a seperate library of functions, used to access the bulle
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/Ye11ow-Flash/Hack-CEWIT/blob/main/BotReply.png"><img src="https://github.com/Ye11ow-Flash/Hack-CEWIT/blob/main/BotReply.png" alt="HackerGuide" width="800"></a>
+  <a href="https://github.com/Ye11ow-Flash/Hack-CEWIT/blob/main/BotReply.png"><img src="https://github.com/Ye11ow-Flash/Hack-CEWIT/blob/main/BotReply.png" alt="StonyBot" width="800"></a>
 <!--   <br>
   Json Schema
   <br> -->
