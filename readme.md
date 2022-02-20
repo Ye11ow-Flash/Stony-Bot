@@ -64,14 +64,14 @@ Thus, we present **StonyBot**! This is a bot which will ease out this process an
 
 Attached to the bot is a seperate library of functions, used to access the bulletin. This means that these functions can be ported to any platform, including slack, telegram, websites, or even Alexa skills. And because this is a Discord bot, it can be added to any discord server!
 
-# Json Schema
+# StonyBot
 
 <h1 align="center">
   <br>
-<!--   <a href="json_schema.png"><img src="json_schema.png" alt="HackerGuide" width="800"></a> -->
-  <br>
+  <a href="https://github.com/Ye11ow-Flash/Hack-CEWIT/blob/main/BotReply.png"><img src="https://github.com/Ye11ow-Flash/Hack-CEWIT/blob/main/BotReply.png" alt="HackerGuide" width="800"></a>
+<!--   <br>
   Json Schema
-  <br>
+  <br> -->
 </h1>
 
 
@@ -84,4 +84,3 @@ Feel free to reach out to our team members. We will be happy to help you.
 - [@ye11ow_flash](https://www.linkedin.com/in/jaineel97/)
 - [@daminals](https://www.linkedin.com/in/danielkogan123/)
 - [@circlegov](https://www.linkedin.com/in/david-levin-361a58185)
-- []()
