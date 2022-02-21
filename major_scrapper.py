@@ -17,7 +17,7 @@ def get_all_data(major):
     sbc = " "
     title = link.find('h3').text
     description = link.find('p').text
-    prerequisite = link.findAll('p')[1].text
+    prerequisite = link.findAll('p')[1].text.replace('Prerequisite:', '')
     if link.findAll('p')[2].text != "" or link.findAll('p')[2].text != "" or link.findAll('p')[2].text != " ":
       sbc = link.findAll('p')[2].text
     cred = link.findAll('p')[3].text
